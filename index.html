@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr John Oosthuizen Music</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <img src="logo.png" alt="Logo" class="logo">
+  <h1>Dr John Oosthuizen Music</h1>
+  <p>Academic • Organist • Music Director • Educator</p>
+</header>
+
+<nav class="nav">
+  <a href="#profile">Profile</a>
+  <a href="#services">Services</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+  <a href="#top">Top</a>
+</nav>
+
+<section id="profile">
+<h2>Profile</h2>
+<p>Academic, instructional, and technical writer and editor...</p>
+</section>
+
+<section id="services">
+<h2>Services</h2>
+<ul>
+<li>Postdoctoral research</li>
+<li>Music direction</li>
+<li>Curriculum development</li>
+</ul>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<ul>
+<li>PhD in Music</li>
+<li>MMus</li>
+<li>BMus Honours</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: joosthuizen@gmail.com</p>
+<p>Mobile: +27 76 855 9400</p>
+</section>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
