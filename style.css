@@ -52,6 +52,7 @@ header {
 main{ padding-bottom:3rem; }
 section { max-width:900px; margin:1.75rem auto; background:white; padding:1.6rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
 h2{ color:var(--turquoise-700); margin-top:0; font-size:1.6rem; }
+section { scroll-margin-top: 90px; } /* adjust if needed */
 
 /* Contact form */
 .contact-form{ display:flex; flex-direction:column; gap:0.9rem; }
