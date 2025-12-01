@@ -1,189 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr John Oosthuizen Music</title>
-
-<!-- SEO Metadata -->
-<meta name="description" content="Dr John Oosthuizen: academic musician, organist, pianist, music director and researcher specialising in South African jazz-influenced organ performance practice.">
-<meta name="keywords" content="Dr John Oosthuizen, organist, pianist, music director, researcher, South African jazz, organ music, academic musician">
-<meta name="author" content="Dr John Oosthuizen">
-<meta name="robots" content="index,follow">
-
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-
-<!-- JSON-LD Structured Metadata -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dr John Oosthuizen",
-  "jobTitle": "Academic Musician, Organist, Pianist, Music Director",
-  "affiliation": {
-    "@type": "Organization",
-    "name": "Stellenbosch University"
-  },
-  "email": "mailto:joosthuizen@gmail.com",
-  "url": "https://YOUR_GITHUB_PAGES_URL",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Cape Town",
-    "addressRegion": "Western Cape",
-    "addressCountry": "South Africa"
-  },
-  "sameAs": []
-}
-</script>
-
-</head>
-
-<body>
-
-<header id="top">
-  <img src="logo.png" alt="Logo" class="logo">
-  <h1>Dr John Oosthuizen Music</h1>
-  <p>Academic • Organist • Pianist • Music Director • Educator</p>
-
-  <!-- Hamburger -->
-  <button class="hamburger" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
-</header>
-
-<nav class="nav" id="nav-menu" aria-label="Primary navigation">
-  <a href="#profile">Profile</a>
-  <a href="#offerings">Offerings</a>
-  <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#book">Book Dr Oosthuizen</a>
-  <a href="#download">CV</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<main>
-
-<section id="profile">
-<h2>Profile</h2>
-<p>Academic, instructional, and technical writer and editor with experience producing theses, courses, and technical publications. Skilled in synthesizing complex concepts and creating structured long-form content...</p>
-<p><em>Testimonials available on request.</em></p>
-</section>
-
-<section id="offerings">
-<h2>Offerings</h2>
-<ul>
-<li><strong>Postdoctoral Music Research</strong> — jazz-influenced organ repertoire, South African aesthetics.</li>
-<li><strong>Music Direction</strong> — choir training, organ/piano services, liturgical planning.</li>
-<li><strong>Music Education</strong> — theory, aural, and piano training.</li>
-</ul>
-</section>
-
-<section id="education">
-<h2>Education</h2>
-<ul>
-<li>PhD in Music — Stellenbosch University (2023–2025)</li>
-<li>MMus (Performance Practice) — Stellenbosch University</li>
-<li>MMus Coursework (Theory & Composition) — UNC Greensboro</li>
-<li>BMus Honours — Stellenbosch University</li>
-<li>Mini-MBA — Harvard Business School</li>
-<li>BSc Mathematics & Computer Science — UKZN</li>
-</ul>
-</section>
-
-<section id="experience">
-<h2>Experience</h2>
-
-<h3>Academic (2018–present)</h3>
-<ul>
-<li>University music lecturer and researcher.</li>
-<li>Research in organ performance practice, jazz-influenced aesthetics.</li>
-</ul>
-
-<h3>Music Educator & Conductor</h3>
-<ul>
-<li>Piano tuition, group singing, school choir direction.</li>
-</ul>
-
-<h3>Church Music Director</h3>
-<ul>
-<li>Organist and pianist; liturgical music planning.</li>
-</ul>
-
-<h3>IT & Technical Publications</h3>
-<ul>
-<li>Former senior IT architect roles at IBM, Sanlam, Safmarine.</li>
-</ul>
-</section>
-
-<section id="book">
-<h2>Book Dr Oosthuizen</h2>
-
-<form class="contact-form" action="https://formspree.io/f/maypllpq" method="POST">
-
+<!--
 <div class="form-row">
-  <div>
-    <label for="name">Your Name</label>
-    <input id="name" type="text" name="name" required>
-  </div>
-
-  <div>
-    <label for="email">Your Email</label>
-    <input id="email" type="email" name="email" required>
-  </div>
+<div>
+<label for="name2">Name</label>
+<input id="name2" type="text" name="name" required>
+</div>
+<div>
+<label for="email2">Email</label>
+<input id="email2" type="email" name="email" required>
+</div>
 </div>
 
-<label for="reason">Enquiry Type</label>
-<select id="reason" name="reason" required>
-  <option value="">Select...</option>
-  <option value="postdoctoral">Postdoctoral Research Placement</option>
-  <option value="school-music">School Music Director</option>
-  <option value="church-music">Church Music Director</option>
-  <option value="performance">Organ/Piano Performance</option>
-  <option value="other">Other</option>
+
+<label for="role">Enquiry Type</label>
+<select id="role" name="role" required>
+<option value="">Choose...</option>
+<option value="postdoc">Postdoctoral Research</option>
+<option value="school">School Music Director</option>
+<option value="church">Church Music Director</option>
+<option value="performance">Performance</option>
+<option value="other">Other</option>
 </select>
 
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="6" required></textarea>
+
+<label for="message2">Message</label>
+<textarea id="message2" name="message" rows="6" required></textarea>
+
+
+<label for="when">Preferred dates (optional)</label>
+<input id="when" type="text" name="dates" placeholder="e.g. June–July 2026">
+
 
 <button type="submit">Send Enquiry</button>
-
 </form>
 
-</section>
 
-<section id="download">
-<h2>Download CV</h2>
-<a href="cv.pdf" class="cv-button" download>Download Full Academic CV</a>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
+<aside class="contact-info">
+<h2>Direct Contact</h2>
 <p><strong>Dr John Oosthuizen</strong></p>
-<p>Cape Town, Western Cape, South Africa</p>
-<p><a href="mailto:joosthuizen@gmail.com">joosthuizen@gmail.com</a></p>
-</section>
-
+<p>City of Cape Town, Western Cape, South Africa</p>
+<p>Mobile: +27 76 855 9400</p>
+<p>Email: <a href="mailto:joosthuizen@gmail.com">joosthuizen@gmail.com</a></p>
+</aside>
 </main>
 
-<footer class="footer">
+
+<footer class="site-footer">
+<div class="container">
 <p>© 2025 Dr John Oosthuizen Music</p>
+</div>
 </footer>
-
-<script>
-function toggleMenu() {
-  document.getElementById('nav-menu').classList.toggle('open');
-}
-
-// Smooth scrolling with menu close
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    document.getElementById('nav-menu').classList.remove('open');
-  });
-});
-</script>
-
 </body>
 </html>
