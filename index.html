@@ -1,72 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dr John Oosthuizen Music — Home</title>
-<meta name="description" content="Dr John Oosthuizen — academic musician, organist, pianist, music director and researcher.">
-<link rel="stylesheet" href="assets/style.css">
-<script defer src="assets/site.js">function validateField(field){
-const msg = field.parentElement.querySelector('.error-msg');
-if(!field.checkValidity()){ msg.style.display='block'; msg.textContent='This field is required'; return false; }
-msg.style.display='none'; return true;
-}
-
-
-document.querySelectorAll('input[required], textarea[required], select[required]').forEach(f=>{
-const msg = document.createElement('div'); msg.className='error-msg'; f.parentElement.appendChild(msg);
-f.addEventListener('input',()=>validateField(f));
-});
-
-
-const submitBtn = document.querySelector('button[type=submit]');
-function updateButtonState(){
-const allValid = Array.from(document.querySelectorAll('input[required], textarea[required], select[required]')).every(f=>f.checkValidity());
-submitBtn.disabled = !allValid;
-}
-setInterval(updateButtonState, 300);
-
-
-</script>
-<!-- JSON-LD (Person + WebSite) -->
-<script type="application/ld+json">
-{ "@context":"https://schema.org", "@type":"WebSite","name":"Dr John Oosthuizen Music","url":"https://johnoos.github.io/dr-john-oosthuizen-music/" }
-</script>
-</head>
-<body>
-<header class="site-header">
-<div class="header-inner">
-<a class="brand" href="index.html"><img src="assets/logo.png" alt="Dr John Oosthuizen logo" class="logo"></a>
-<button id="hamburger" class="hamburger" aria-label="Open navigation">☰</button>
-<nav id="main-nav" class="main-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="offerings.html">Offerings</a>
-<a href="contact.html">Contact</a>
-<a href="assets/cv.pdf" download>Download CV</a>
-</nav>
-</div>
+<!-- Single-page rebuilt website for Dr John Oosthuizen Music -->
+<button class="hamburger" onclick="toggleMenu()">☰</button>
 </header>
-
-
+<nav id="nav-menu" class="nav">
+<a href="#profile">Profile</a>
+<a href="#offerings">Offerings</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#book">Book</a>
+<a href="#download">CV</a>
+<a href="#contact">Contact</a>
+<a href="#top">Top</a>
+</nav>
 <main>
-<section class="hero">
-<div class="hero-inner">
-<h1>Dr John Oosthuizen</h1>
-<p class="sub">Academic • Organist • Pianist • Music Director • Educator</p>
-<p class="lead">Researcher in jazz-inflected organ aesthetics, experienced university lecturer, church music director and educator. Available for postdoctoral appointments, music-director roles, and academic collaborations.</p>
-<p class="cta-row"><a class="btn" href="offerings.html">View Offerings</a> <a class="btn ghost" href="contact.html">Book / Enquire</a></p>
-</div>
+<section id="profile">
+<h2>Profile</h2>
+<p>Academic, instructional and technical writer and editor, university lecturer, researcher and church music director. Research interests include organ performance practice, South African jazz idioms, French Romantic organ traditions and chant studies.</p>
+<p><em>Testimonials available on request.</em></p>
 </section>
-
-
-<section class="summary">
-<div class="container">
-<h2>Quick Bio</h2>
-<p>Dr John Oosthuizen holds a PhD (Music) from Stellenbosch University (2025). His research focuses on organ performance practice, South African jazz idioms and the intersection of improvisation and liturgical repertoire. John teaches aural training, music theory and keyboard skills and serves as Music Director at Stellenbosch Catholic Church.</p>
-<ul class="highlights">
-<li>PhD in Music (Stellenbosch University, 2023–2025)</li>
-<li>MMus Organ Performance (2020–2022)</li>
-<li>School choir conductor & private piano tutor</li>
+<section id="offerings">
+<h2>Offerings</h2>
+<ul>
+<li><strong>Postdoctoral Research:</strong> South African jazz-influenced organ aesthetics, improvisation studies, liturgical repertoire research.</li>
+<li><strong>Music Direction:</strong> Choir training, liturgy planning, organ/piano performance.</li>
+<li><strong>Music Education:</strong> Aural training, theory, piano, singing instruction.</li>
 </ul>
+</section>
+<section id="education">
+<h2>Education</h2>
+<ul>
+<li>PhD in Music — Stellenbosch University (2023–2025)</li>
+<li>MMus (Organ repertoire & performance practice) — Stellenbosch University (2020–2022)</li>
+<li>MMus Coursework (Theory & Composition) — UNC Greensboro, North Carolina, USA (2020)</li>
+<li>BMus Honours (cum laude) — Stellenbosch University (2019)</li>
+<li>Mini–MBA — Harvard Business School, Boston, MA (2010)</li>
+<li>TOGAF8 Certification — NUS (2007)</li>
+<li>BSc Mathematics & Computer Science — UKZN (1978)</li>
+</ul>
+</section>
+<section id="experience">
+<h2>Experience</h2>
+<h3>Academic (2018–present)</h3>
+<ul>
+<li>Aural training, theory, keyboard skills lecturer.</li>
+<li>Researcher in jazz-inflected organ aesthetics.</li>
+</ul>
+<h3>Music Educator & Conductor</h3>
+<ul>
+<li>Piano tutor, choir conductor, school productions.</li>
+</ul>
+<h3>Church Music Director</h3>
+<ul>
+<li>Organist/pianist, liturgical planning.</li>
+</ul>
+<h3>Technical Publications</h3>
+<ul>
+<li>Former enterprise architect at IBM, Sanlam, Safmarine.</li>
+<li>Author/co-author of IBM Redbooks and McGraw Hill publications.</li>
+</ul>
+</section>
+<section id="book">
+<h2>Book Dr Oosthuizen</h2>
+<form onsubmit="sendEmailJS(event)">
+<div class="form-row"><div><label>Name</label><input name="name" required></div><div><label>Email</label><input name="email" type="email" required></div></div>
+<label>Enquiry Type</label>
+<select name="role" required>
+<option value="">Select...</option>
+<option value="postdoc">Postdoctoral Research</option>
+<option value="school">School Music Director</option>
+<option value="church">Church Music Director</option>
+<option value="performance">Performance</option>
+<option value="other">Other</option>
+</select>
+<label>Message</label>
+<textarea name="message" rows="6" required></textarea>
+<button type="submit">Send Enquiry</button>
+<div id="form-status" class="status"></div>
+</form>
+</section>
+<section id="download">
+<h2>Download CV</h2>
+<a href="cv.pdf" class="cv-button" download>Download Full Academic CV</a>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p><strong>Dr John Oosthuizen</strong><br>Cape Town, Western Cape, South Africa<br><a href="mailto:joosthuizen@gmail.com">joosthuizen@gmail.com</a></p>
+</section>
+</main>
+<footer class="footer">
+<p>© 2025 Dr John Oosthuizen Music</p>
+</footer>
+<script src="site.js"></script>
+</body>
 </html>
