@@ -79,7 +79,7 @@ function sendEmailJS(event){
   const params = {
     name:    form.name.value,
     email:   form.email.value,
-    role:    form.role.value,
+    /* role:    form.role.value, */
     message: form.message.value
   };
 
