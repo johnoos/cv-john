@@ -1,38 +1,70 @@
-/* FULLY REBUILT site.js — EmailJS 2025 API Compatible, Error‑Safe, UI‑Complete */
-if(!response.ok) throw new Error("EmailJS request failed");
-
-
-statusBox.className = "status success visible";
-statusBox.textContent = "Message sent successfully!";
-form.reset();
-})
-.catch(() => {
-statusBox.className = "status error visible";
-statusBox.textContent = "Error sending message. Please try again.";
-})
-.finally(() => {
-btn.disabled = false;
-btn.textContent = 'Send enquiry';
-});
+<!doctype html>
+"@type":"PostalAddress",
+"addressLocality":"Stellenbosch",
+"addressRegion":"Western Cape",
+"addressCountry":"South Africa"
+},
+"description":"Academic and professional musician specialising in organ research, jazz‑influenced organ repertoire, performance, and education.",
+"worksFor":{
+"@type":"Organization",
+"name":"Stellenbosch University"
 }
+}</script>
 
 
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top" class="site-header">
+<img src="logo.png" alt="Logo" class="logo">
+<h1 class="site-title">Dr John Oosthuizen Music</h1>
+<p class="site-tag">Academic • Organist • Pianist • Music Director • Educator</p>
+<button id="hamburger" class="hamburger">☰</button>
+<nav id="primary-nav" class="primary-nav">
+<a href="#profile">Profile</a>
+<a href="#offerings">Offerings</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#book">Book</a>
+<a href="#download">CV</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
 
-/* --------------------------------------------------
-LIVE VALIDATION (Enables button only when valid)
--------------------------------------------------- */
-(function(){
-const form = document.getElementById('contact-form');
-const submit = document.getElementById('submit-btn');
+<main>
+<section id="profile" class="section"><div class="container"><h2>Profile</h2><p>Academic, instructional and technical writer and editor; university music lecturer, researcher, private teacher and church music director.</p><p><em>Testimonials available on request.</em></p></div></section>
+<section id="offerings" class="section"><div class="container"><h2>Offerings</h2><ul class="bullets"><li><strong>Postdoctoral Music Research</strong> — collaboration in organ repertoire research and South African jazz‑inflected organ studies.</li><li><strong>Music Direction</strong> — choir development, liturgical music planning, and performance direction.</li><li><strong>Organist/Pianist</strong> — professional liturgical and concert performance.</li><li><strong>Private organ/piano/theory tuition</strong> — foundational and intermediate learners.</li></ul></div></section>
+<section id="education" class="section"><div class="container"><h2>Education</h2><ul class="compact"><li>PhD in Music — Stellenbosch University (2023–2025)</li><li>MMus (Organ performance practice) — Stellenbosch University (2020–2022)</li><li>MMus coursework — UNC Greensboro, North Carolina, USA (2020)</li><li>BMus Honours (cum laude) — Stellenbosch University (2019)</li><li>Mini‑MBA — Harvard Business School, Boston, MA (2010)</li><li>TOGAF8 Certification — National University of Singapore (2007)</li><li>BSc Mathematics & Computer Science — UKZN (1978)</li></ul></div></section>
+<section id="experience" class="section"><div class="container"><h2>Experience</h2><h3>Academic</h3><ul class="compact"><li>Aural training, music theory and keyboard skills lecturer; BMus tutoring.</li><li>Jazz‑influenced organ research and related performance practice studies.</li></ul><h3>Music Educator & Conductor</h3><ul class="compact"><li>Piano tuition; choir direction; school music production leadership.</li></ul><h3>Church Music Director</h3><ul class="compact"><li>Organist/pianist; liturgical planning and repertoire coordination.</li></ul></div></section>
 
 
-function update(){
-const allValid = [...form.querySelectorAll('[required]')].every(f => f.checkValidity());
-submit.disabled = !allValid;
-}
+<section id="book" class="section"><div class="container"><h2>Book Dr Oosthuizen</h2>
+<form id="contact-form" class="contact-form" onsubmit="sendEmailJS(event)">
+<div class="form-row">
+<div class="field"><label>Name</label><input name="name" required><div class="error-msg"></div></div>
+<div class="field"><label>Email</label><input name="email" type="email" required><div class="error-msg"></div></div>
+</div>
+<label>Purpose of enquiry</label>
+<select name="role" required>
+<option value="">Select…</option>
+<option value="postdoctoral">Postdoctoral Research Placement</option>
+<option value="school-music">School Music Director</option>
+<option value="church-music">Church Music Director</option>
+<option value="organist-pianist">Organist/Pianist</option>
+<option value="private-tuition">Private organ/piano/theory tuition</option>
+</select>
+<div class="error-msg"></div>
+<label>Message</label><textarea name="message" rows="6" required></textarea><div class="error-msg"></div>
+<button id="submit-btn" type="submit" disabled>Send enquiry</button>
+<div id="form-status" class="status"></div>
+</form>
+</div></section>
 
 
-form.addEventListener('input', update);
-update();
-})();
+<section id="download" class="section"><div class="container"><h2>Download CV</h2><a href="cv.pdf" class="cv-button" download>Download Full Academic CV</a></div></section>
+<section id="contact" class="section"><div class="container"><h2>Contact</h2><p><strong>Dr John Oosthuizen</strong><br>Stellenbosch, Western Cape, South Africa<br>Mobile: +27 76 855 9400<br>Email: <a href="mailto:joosthuizen@gmail.com">joosthuizen@gmail.com</a></p></div></section>
+</main>
+<footer class="site-footer"><div class="container"><p>© 2025 Dr John Oosthuizen Music</p></div></footer>
+<script src="site.js"></script>
+</body></html>
