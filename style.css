@@ -95,7 +95,8 @@ main{max-width:900px;margin:1.6rem auto;padding:0 1rem 3rem}
   font-size:1.5rem;
   /* remove color property */
 }
-.compact,.bullets{padding-left:1.1rem}
+/* .compact,.bullets{padding-left:1.1rem} */
+.bullets{list-style-type: none; padding-left: 1em}
 
 /* FORM */
 .contact-form{display:flex;flex-direction:column;gap:1rem}
