@@ -62,9 +62,10 @@
     <a href="#offerings">Skills</a>
     <a href="#education">Education</a>
     <a href="#acad-experience">Experience</a>
-    <a href="#enquiry">Enquiry</a>
     <a href="#download">CV</a>
     <a href="#contact">Contact</a>
+    <a href="#references">References</a>
+    <a href="#enquiry">Enquiry</a>
   </nav>
 </header>
 
@@ -150,27 +151,6 @@
   <li>Cooperative Processing in an AS/400 Environment. IBM Rochester, MN.</li>
   </ul>
 </div></section>
-
-<section id="enquiry" class="section"><div class="container">
-  <h2>Enquiry</h2>
-  <form id="contact-form" class="contact-form" onsubmit="sendEmailJS(event)">
-    <div class="form-row">
-      <div class="field"><label>Name</label><input name="name" required><div class="error-msg"></div></div>
-      <div class="field"><label>Email</label><input name="email" type="email" required><div class="error-msg"></div></div>
-    </div>
-    <div class="error-msg"></div>
-    <label>Message</label><textarea name="message" rows="6" required></textarea><div class="error-msg"></div>
-    <button id="submit-btn" type="submit" disabled>Send enquiry</button>
-    <div id="form-status" class="status"></div>
-  </form>
-</div></section>
-
-<section id="download" class="section"><div class="container">
-  <h2>Download this CV in PDF form</h2>
-  <ul class="bullets">
-  <li><a href="cv.pdf" class="cv-button" download>Download</a></li>
-  </ul>
-</div></section>
   
 <section id="contact" class="section"><div class="container">
   <h2>Contact info and online presence</h2>
@@ -184,9 +164,7 @@
         Email: <a href="mailto:joosthuizen@gmail.com">joosthuizen@gmail.com</a>
       </p>
     </td>
-
     <td style="width:40px;"></td>
-
     <td style="text-align:right;">
       <p>
         LinkedIn: 
@@ -202,7 +180,21 @@
 <section id="references" class="section"><div class="container">
   <h2>Reference letters</h2>
   <p>Both academic and character references will be made available on request.</p>
-</div></section> 
+</div></section>
+
+<section id="enquiry" class="section"><div class="container">
+  <h2>Enquiry</h2>
+  <form id="contact-form" class="contact-form" onsubmit="sendEmailJS(event)">
+    <div class="form-row">
+      <div class="field"><label>Name</label><input name="name" required><div class="error-msg"></div></div>
+      <div class="field"><label>Email</label><input name="email" type="email" required><div class="error-msg"></div></div>
+    </div>
+    <div class="error-msg"></div>
+    <label>Message</label><textarea name="message" rows="6" required></textarea><div class="error-msg"></div>
+    <button id="submit-btn" type="submit" disabled>Send enquiry</button>
+    <div id="form-status" class="status"></div>
+  </form>
+</div></section>  
   
 </main>
   
